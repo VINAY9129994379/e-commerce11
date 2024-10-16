@@ -1,0 +1,64 @@
+/* BestSeller.css */
+.bestseller {
+  max-width: 1200px; /* Sets a maximum width for the bestseller section */
+  margin: 0 auto; /* Centers the section */
+  padding: 40px 20px; /* Adds padding around the section */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 10px; /* Rounded corners for the section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.seller-text {
+  text-align: center; /* Centers the title and description */
+  margin-bottom: 30px; /* Adds space below the title */
+}
+
+.text-para {
+  font-size: 16px;
+  color: #666; /* Lighter gray for the description text */
+  max-width: 600px; /* Limits the width of the description */
+  margin: 0 auto; /* Centers the description */
+}
+
+.bestseller-product {
+  display: grid; /* Uses a grid layout for product items */
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* Space between product items */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .bestseller-product {
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .bestseller-product {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+  
+  .text-para {
+      font-size: 15px; /* Slightly smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-para {
+      font-size: 14px; /* Smaller font size for smaller screens */
+  }
+  
+  .bestseller-product {
+      grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .bestseller {
+      padding: 20px 10px; /* Reduces padding on very small screens */
+  }
+
+  .text-para {
+      font-size: 12px; /* Even smaller font size for very small screens */
+  }
+}

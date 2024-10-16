@@ -1,0 +1,131 @@
+.related-product {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  width: 1300px;
+}
+
+.related-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.related-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.related-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 130px;
+}
+
+.related-products .product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.related-products .product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.related-products .product-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.related-products .product-item h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.related-products .product-item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+}
+
+.related-products .product-item .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .related-product {
+      width: 90%; /* Adjust width for medium screens */
+      margin: 20px auto; /* Center the container */
+  }
+
+  .related-text h2 {
+      font-size: 22px; /* Decrease font size */
+  }
+
+  .related-products {
+      gap: 80px; /* Decrease gap between items */
+  }
+}
+
+@media (max-width: 768px) {
+  .related-product {
+      padding: 15px; /* Reduce padding */
+  }
+
+  .related-text h2 {
+      font-size: 20px; /* Smaller heading */
+  }
+
+  .related-products {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid layout */
+      gap: 40px; /* Further reduce gap */
+  }
+
+  .related-products .product-item h3 {
+      font-size: 16px; /* Decrease font size */
+  }
+
+  .related-products .product-item p,
+  .related-products .product-item .price {
+      font-size: 14px; /* Smaller font size for descriptions and prices */
+  }
+}
+
+@media (max-width: 576px) {
+  .related-product {
+      padding: 10px; /* Further reduce padding */
+  }
+
+  .related-text h2 {
+      font-size: 18px; /* Smaller heading */
+  }
+
+  .related-products {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust grid for small screens */
+      gap: 20px; /* Further reduce gap */
+  }
+
+  .related-products .product-item h3 {
+      font-size: 14px; /* Smaller heading for product items */
+  }
+
+  .related-products .product-item p,
+  .related-products .product-item .price {
+      font-size: 12px; /* Smaller font size for descriptions and prices */
+  }
+}

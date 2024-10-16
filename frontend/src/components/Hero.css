@@ -1,0 +1,112 @@
+.herocontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-left .heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.hero-left .btn {
+  padding: 12px 24px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.hero-left .btn:hover {
+  background-color: #ff4500;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .herocontainer {
+      padding: 40px; /* Reduce padding for larger tablets */
+  }
+
+  .hero-left h1 {
+      font-size: 40px; /* Adjust heading size for larger tablets */
+  }
+
+  .hero-left p {
+      font-size: 16px; /* Adjust paragraph size for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .herocontainer {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text */
+      padding: 20px; /* Reduce padding */
+  }
+
+  .hero-left h1 {
+      font-size: 36px; /* Adjust heading size for medium screens */
+  }
+
+  .hero-left p {
+      font-size: 16px; /* Adjust paragraph size for medium screens */
+  }
+
+  .hero-right {
+      margin-top: 20px; /* Add margin above the image */
+  }
+
+  .hero-left .btn {
+      padding: 10px 20px; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-left h1 {
+      font-size: 28px; /* Further reduce heading size for smaller screens */
+  }
+
+  .hero-left p {
+      font-size: 14px; /* Further reduce paragraph size for smaller screens */
+  }
+
+  .hero-left .btn {
+      width: 100%; /* Make button full width */
+  }
+}

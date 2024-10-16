@@ -1,0 +1,53 @@
+.ourpolicy {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.policy-content, .policy-quality, .policy-support {
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.policy-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.policy-para {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.policy-content:hover, .policy-quality:hover, .policy-support:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ourpolicy {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items */
+  }
+
+  .policy-content, .policy-quality, .policy-support {
+      margin: 15px 0; /* Vertical spacing */
+  }
+}
+
+@media (max-width: 576px) {
+  .policy-img {
+      width: 50px; /* Smaller icon size for smaller screens */
+      height: 50px;
+  }
+
+  .policy-para {
+      font-size: 14px; /* Smaller font size for paragraph */
+  }
+}

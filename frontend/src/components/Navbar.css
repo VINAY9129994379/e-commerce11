@@ -1,0 +1,193 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #222;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navlist a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navlist a:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+.navleft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navleft .MuiSvgIcon-root {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.group-nav {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.group-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  display: none;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.group-dropdown section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.group-dropdown section option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.group-dropdown section option:hover {
+  background-color: #f39c12;
+  color: white;
+}
+
+.group-nav:hover .group-dropdown {
+  display: block;
+}
+
+.localIcon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.menuicon {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sidebar Menu for Small Screens */
+.overflow-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.flex-back {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.flex-back a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.flex-back a:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+.back-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.back-dropdown p {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navlist {
+      gap: 20px; /* Reduce gap for medium screens */
+  }
+
+  .logo {
+      font-size: 24px; /* Smaller logo for medium screens */
+  }
+
+  .navleft {
+      gap: 15px; /* Adjust gap for icons */
+  }
+}
+
+@media (max-width: 768px) {
+  .navlist {
+      display: none; /* Hide nav links */
+  }
+
+  .menuicon {
+      display: block; /* Show menu icon */
+  }
+
+  .navleft {
+      gap: 10px; /* Adjust gap */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+      padding: 15px 20px; /* Reduce padding for small screens */
+  }
+
+  .logo {
+      font-size: 20px; /* Further reduce logo size */
+  }
+
+  .menuicon {
+      font-size: 24px; /* Adjust icon size for small screens */
+  }
+}

@@ -1,0 +1,92 @@
+.collection {
+  padding: 40px 20px; /* Top and bottom padding with side padding */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.collection-contain {
+  max-width: 1200px; /* Maximum width for the collection */
+  margin: 0 auto; /* Centering the collection */
+  padding: 20px; /* Inner padding for the container */
+  background-color: #fff; /* White background for content area */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.top-text {
+  text-align: center; /* Center the text */
+  margin-bottom: 30px; /* Space below the top text */
+}
+
+.top-text h2 {
+  font-size: 2.5em; /* Large font size for the title */
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Dark color for the title */
+}
+
+.text-para {
+  font-size: 1.1em; /* Slightly larger font size */
+  color: #666; /* Gray color for the paragraph */
+  line-height: 1.6; /* Line height for readability */
+  text-align: center;
+}
+
+.product-collection {
+  display: grid; /* Use grid layout for product items */
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* Space between items */
+}
+
+.product-collection > * {
+  background-color: #fff; /* White background for each product item */
+  border-radius: 8px; /* Rounded corners for product items */
+  overflow: hidden; /* Clip overflow for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for product items */
+  transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.product-collection > *:hover {
+  transform: scale(1.03); /* Scale up slightly on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .product-collection {
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row on larger tablets */
+  }
+
+  .top-text h2 {
+      font-size: 2em; /* Adjust title size for larger tablets */
+  }
+
+  .text-para {
+      font-size: 1em; /* Adjust paragraph size for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-collection {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+
+  .top-text h2 {
+      font-size: 1.8em; /* Adjust title size for medium screens */
+  }
+
+  .text-para {
+      font-size: 0.9em; /* Adjust paragraph size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-collection {
+      grid-template-columns: 1fr; /* 1 item per row on small screens */
+  }
+
+  .top-text h2 {
+      font-size: 1.5em; /* Further reduce title size for small screens */
+  }
+
+  .text-para {
+      font-size: 0.8em; /* Further reduce paragraph size for small screens */
+  }
+}

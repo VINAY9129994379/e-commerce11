@@ -1,0 +1,81 @@
+/* Main container for the search bar */
+.search-bar {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    background-color: #f5f5f5; /* Light background color */
+    padding: 10px; /* Padding for some spacing */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* For positioning the close icon */
+}
+
+/* Container for the input field and search icon */
+.search-contain {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    flex-grow: 1; /* Allow to take available space */
+}
+
+/* Input field styles */
+.search-contain input {
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px; /* Padding inside the input */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Font size */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Input field focus styles */
+.search-contain input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+/* Search icon styles */
+.search-img {
+    width: 24px; /* Width of the search icon */
+    height: 24px; /* Height of the search icon */
+    margin-left: 10px; /* Space between input and icon */
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+/* Close icon styles */
+.cross-img {
+    width: 24px; /* Width of the close icon */
+    height: 24px; /* Height of the close icon */
+    margin-left: 10px; /* Space between search container and close icon */
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-bar {
+        padding: 8px; /* Reduce padding on smaller screens */
+    }
+
+    .search-contain input {
+        font-size: 14px; /* Decrease font size */
+    }
+
+    .search-img, .cross-img {
+        width: 20px; /* Reduce icon size */
+        height: 20px; /* Reduce icon size */
+        margin-left: 8px; /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .search-contain {
+        width: 100%; /* Full width for the input container */
+    }
+
+    .search-contain input {
+        margin-bottom: 5px; /* Add margin for spacing below input */
+    }
+}

@@ -1,0 +1,132 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.about-contain img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-contain div {
+  width: 50%;
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-contain p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-contain b {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+
+.about-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description-text {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.description-right,
+.description-middle,
+.description-left {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-right b,
+.description-middle b,
+.description-left b {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.description-right p,
+.description-middle p,
+.description-left p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .about-contain,
+  .description-text {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-contain img,
+  .about-contain div {
+      width: 100%;
+  }
+
+  .description-right,
+  .description-middle,
+  .description-left {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+      padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .about-contain {
+      gap: 10px; /* Reduce gap between elements */
+  }
+
+  .about-contain img {
+      width: 80%; /* Adjust image width for smaller screens */
+  }
+
+  .about-contain div {
+      font-size: 0.9rem; /* Decrease font size for better readability */
+  }
+
+  .description-text {
+      flex-direction: column; /* Stack description boxes vertically */
+  }
+
+  .description-right,
+  .description-middle,
+  .description-left {
+      margin-bottom: 15px; /* Adjust margin for spacing */
+  }
+}

@@ -1,0 +1,87 @@
+/* ProductItem.css */
+.product-item {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-item:hover {
+  transform: translateY(-5px); /* Adds a lift effect on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.item-name {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-item a:hover {
+  color: #f97300; /* Change text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-item {
+      width: 200px; /* Decrease width for smaller screens */
+      padding: 15px; /* Adjust padding */
+  }
+
+  .item-name {
+      font-size: 16px; /* Slightly smaller font size for item name */
+  }
+
+  .product-item p {
+      font-size: 14px; /* Slightly smaller font size for description */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-item {
+      width: 150px; /* Further decrease width for very small screens */
+      padding: 10px; /* Adjust padding */
+  }
+
+  .item-name {
+      font-size: 14px; /* Smaller font size for item name */
+  }
+
+  .product-item p {
+      font-size: 12px; /* Smaller font size for description */
+  }
+}

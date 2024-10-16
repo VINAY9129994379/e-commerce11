@@ -1,0 +1,35 @@
+/* Container for the title */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* Align text vertically */
+  gap: 10px; /* Space between the two text elements */
+  margin: 20px 0; /* Margin to give space around the title */
+}
+
+/* Style for the text inside the title */
+.text-title {
+  font-size: 24px; /* Font size for the text */
+  font-weight: bold; /* Make text bold */
+  color: #333; /* Dark gray color */
+  text-transform: uppercase; /* Transform text to uppercase */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .text-title {
+      font-size: 20px; /* Reduce font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: center; /* Center align items */
+  }
+
+  .text-title {
+      font-size: 18px; /* Further reduce font size */
+      text-align: center; /* Center the text */
+  }
+}

@@ -1,0 +1,81 @@
+/* CartTotal.css */
+
+.cart-total {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.cart-total-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-container-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-container-details p {
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.cart-container-details:last-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .cart-total {
+    max-width: 90%; /* Increase max-width for larger tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart-total {
+    max-width: 100%;
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .cart-container-details {
+    font-size: 14px; /* Smaller font size for smaller screens */
+  }
+
+  .cart-container-details:last-of-type {
+    font-size: 16px; /* Adjust font size for the last detail */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cart-total {
+    padding: 10px; /* Reduce padding for very small screens */
+  }
+
+  .cart-container-details {
+    flex-direction: column; /* Stack details vertically */
+  }
+
+  .cart-container-details:last-of-type {
+    font-size: 14px; /* Further reduce font size for very small screens */
+  }
+}
